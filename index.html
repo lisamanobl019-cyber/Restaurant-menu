@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood Cafe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a class="logo" href="#">🍔 FastFood <span>Café</span></a>
+    <nav>
+        <a href="#menu">Меню</a>
+        <a href="#about">О нас</a>
+        <a href="#contacts">Контакты</a>
+    </nav>
+    <button id="cartButton" class="cart-button">
+        🛒 Корзина (<span id="cartCount">0</span>)
+    </button>
+</header>
+
+<section class="hero">
+    <div>
+        <p class="small-title">ДОБРО ПОЖАЛОВАТЬ В FASTFOOD</p>
+        <h1>Быстро. Вкусно.<br><span>По-нашему!</span></h1>
+        <p>Свежие ингредиенты и отличные цены каждый день.</p>
+        <a class="main-button" href="#menu">Посмотреть меню ↓</a>
+    </div>
+    <img
+        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=900&auto=format&fit=crop&q=80"
+        alt="Вкусный бургер">
+</section>
+
+<main class="container" id="menu">
+    <h2>Наше меню</h2>
+    <p class="subtitle">Выбирай любимые блюда!</p>
+
+    <div class="filters">
+        <input id="search" type="search"
+               placeholder="🔍 Найти блюдо...">
+
+        <select id="category">
+            <option value="Все">Все категории</option>
+            <option value="Бургеры">Бургеры</option>
+            <option value="Пицца">Пицца</option>
+            <option value="Закуски">Закуски</option>
+            <option value="Напитки">Напитки</option>
+        </select>
+
+        <select id="sort">
+            <option value="default">По умолчанию</option>
+            <option value="asc">Сначала дешевле</option>
+            <option value="desc">Сначала дороже</option>
+        </select>
+    </div>
+
+    <div class="categories">
+        <button class="category-btn active" data-category="Все">Все</button>
+        <button class="category-btn" data-category="Бургеры">🍔 Бургеры</button>
+        <button class="category-btn" data-category="Пицца">🍕 Пицца</button>
+        <button class="category-btn" data-category="Закуски">🍟 Закуски</button>
+        <button class="category-btn" data-category="Напитки">🥤 Напитки</button>
+    </div>
+
+    <div id="menuList" class="menu-grid"></div>
+    <p id="emptyMessage" class="empty"></p>
+</main>
+
+<section class="about" id="about">
+    <h2>Почему выбирают нас?</h2>
+    <div class="features">
+        <div>🍔 <h3>Вкусная еда</h3><p>Любимые блюда для каждого.</p></div>
+        <div>💰 <h3>Доступные цены</h3><p>Вкусно и недорого.</p></div>
+        <div>⚡ <h3>Быстро</h3><p>Простой выбор блюд.</p></div>
+    </div>
+</section>
+
+<section class="container cart-section" id="cart">
+    <h2>🛒 Ваша корзина</h2>
+    <div id="cartItems"></div>
+    <h3 id="total">Итого: 0 сом</h3>
+    <button id="clearCart" class="secondary-button">Очистить корзину</button>
+
+    <h2>Оформление заказа</h2>
+    <form id="orderForm">
+        <input id="customerName" type="text"
+               placeholder="Ваше имя" required>
+        <input id="customerPhone" type="tel"
+               placeholder="Номер телефона" required>
+        <input id="customerAddress" type="text"
+               placeholder="Адрес доставки" required>
+        <button type="submit" class="main-button">
+            Подтвердить заказ
+        </button>
+    </form>
+    <p id="orderMessage" role="status"></p>
+</section>
+
+<footer id="contacts">
+    <h2>🍔 FastFood Cafe</h2>
+    <p>📍 г. Ош | 📞 +996 700 123 456</p>
+    <p>Ежедневно: 10:00–23:00</p>
+    <p>© 2026 FastFood Cafe. Приятного аппетита!</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
